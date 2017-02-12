@@ -1,0 +1,104 @@
+<!DOCTYPE>
+<html>
+<head>
+    <title>Previsão do Tempo</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/css.css" />
+    <link rel="icon" type="image/png" href="imgs/icon.png" />
+   
+</head>
+<body>
+<div class="container-fluid">
+<div class="row">
+
+  <div class="col-md-3" id="direita"> 
+
+  <input type="text" id="cidade"  placeholder="&#9906; Procurar"> 
+<br>
+<div class="fav">Favoritos</div>
+<div class="cityFav" onclick="busca('Joinville, SC');">Joinville</div>
+<div class="cityFav" onclick="busca('Blumenau, SC');">Blumenau</div>
+<div class="fav"> Ultimas localidades visitadas </div>
+<div class="cityFav" onclick="busca('Rio do Sul, SC');">Rio do Sul</div>
+<div class="cityFav" onclick="busca('Timbó, SC');">Timbó</div>
+<div class="cityFav" onclick="busca('Indaial, SC');">Indaial</div>
+<div class="cityFav" onclick="busca('Joaçaba, SC');">Joaçaba</div>
+<div class="cityFav" onclick="busca('Piratuba, SC');">Piratuba</div>
+<div class="embaixo"></div>
+  </div>
+
+  <div class="col-md-9" id="esquerda">
+
+<div id="espera">
+ <img src="imgs/carregando.gif" id="carregar">
+</div>
+
+ <div id="conteudo">
+  <div id="alert">
+</div>
+  <div id="today">
+    <span id="title"></span>
+    <div id="hoje">
+      <span id="tempo" class="inline-blo"> </span>
+      <span id="atual" class="inline-blo"> </span>
+      
+      <div id="dados" class="inline-blo"> </div>
+
+    </div>
+</div>
+
+<h1>Previsão para os próximos dias</h1><br>
+<table id="tabelaPrevi">
+<tr id="dia1" class="fiveDays row fd" data-toggle="modal" data-target="#myModal"></tr>
+<tr id="dia2" class="fiveDays row fd" data-toggle="modal" data-target="#myModal"></tr>
+<tr id="dia3" class="fiveDays row fd" data-toggle="modal" data-target="#myModal"></tr>
+<tr id="dia4" class="fiveDays row fd" data-toggle="modal" data-target="#myModal"></tr>
+<tr id="dia5" class="fiveDays row fd" data-toggle="modal" data-target="#myModal"></tr>
+
+</table>
+
+</div>
+  </div>
+</div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><div id="diaEsp"></div></h4>
+      </div>
+      <div class="modal-body">
+        <div id="esp">
+
+<div class="row">
+<div id="hora0" class="fiveDays col-md-3"></div>
+<div id="hora3" class="fiveDays col-md-3"></div>
+<div id="hora6" class="fiveDays col-md-3"></div>
+<div id="hora9" class="fiveDays col-md-3"></div>
+</div>
+<div class="row">
+<div id="hora12" class="fiveDays col-md-3"></div>
+<div id="hora15" class="fiveDays col-md-3"></div>
+<div id="hora18" class="fiveDays col-md-3"></div>
+<div id="hora21" class="fiveDays col-md-3"></div>
+</div>
+</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <script src="js/jquery-2.2.4.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/js.js"></script>
+
+</body>
+</html>
